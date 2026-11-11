@@ -10,11 +10,7 @@
     "format": "biome format --write",
     "check": "biome check",
     "check:fix": "biome check --write",
-    "prepare": "husky",
     "generate:presets": "ts-node -P tsconfig.scripts.json src/scripts/generate-theme-presets.ts"
-  },
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx}": ["biome check --write --no-errors-on-unmatched"]
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
@@ -22,6 +18,8 @@
     "@dnd-kit/modifiers": "^9.0.0",
     "@dnd-kit/sortable": "^10.0.0",
     "@hookform/resolvers": "^5.2.2",
+    "@supabase/ssr": "^0.10.2",
+    "@supabase/supabase-js": "^2.104.0",
     "@tanstack/react-table": "^8.21.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -54,8 +52,6 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "^1.0.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
     "postcss": "^8.5.10",
     "tailwindcss": "^4.1.5",
     "ts-node": "^10.9.2",

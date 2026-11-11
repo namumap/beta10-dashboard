@@ -128,3 +128,13 @@ Contributions are welcome. Feel free to open issues, feature requests, or start 
 
 
 **Happy Vibe Coding!**
+
+```
+CLOUDFLARE_API_TOKEN=<your-cloudflare-token>  wrangler secret put NEXT_PUBLIC_SUPABASE_URL --name beta10-dashboard-next
+CLOUDFLARE_API_TOKEN=<your-cloudflare-token>  wrangler secret put NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY --name beta10-dashboard-next
+
+rm -rf .next && pnpm run build
+
+CLOUDFLARE_API_TOKEN=<your-cloudflare-token> npx wrangler pages deploy out --project-name=beta10-dashboard-next
+```
+

@@ -2,12 +2,17 @@ import {
   Banknote,
   Calendar,
   ChartBar,
+  ChartCandlestick,
+  DatabaseBackup,
   Fingerprint,
   Forklift,
   Gauge,
   GraduationCap,
   Kanban,
   LayoutDashboard,
+  ListCheck,
+  ListChecks,
+  ListChecksIcon,
   ListTodo,
   Lock,
   type LucideIcon,
@@ -47,6 +52,22 @@ export interface NavGroup {
 export const sidebarItems: NavGroup[] = [
   {
     id: 1,
+    label: "Trading",
+    items: [
+      {
+        title: "Accounts",
+        url: "/trading/accounts",
+        icon: ListChecks,
+      },
+      {
+        title: "Analysis",
+        url: "/trading/analysis",
+        icon: ChartCandlestick,
+      },
+    ],
+  },
+  {
+    id: 2,
     label: "Dashboards",
     items: [
       {
@@ -95,7 +116,7 @@ export const sidebarItems: NavGroup[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     label: "Pages",
     items: [
       {
@@ -154,7 +175,7 @@ export const sidebarItems: NavGroup[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     label: "Legacy",
     items: [
       {
@@ -168,7 +189,7 @@ export const sidebarItems: NavGroup[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     label: "Misc",
     items: [
       {
